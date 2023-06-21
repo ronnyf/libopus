@@ -28,6 +28,8 @@ POSSIBILITY OF SUCH DAMAGE.
 # include "config.h"
 #endif
 
+#if defined(FIXED_POINT)
+
 #include "main_FIX.h"
 #include "NSQ.h"
 #include "SigProc_FIX.h"
@@ -121,3 +123,5 @@ void (*const SILK_WARPED_AUTOCORRELATION_FIX_IMPL[OPUS_ARCHMASK + 1])(
 # endif
 
 #endif /* OPUS_HAVE_RTCD */
+
+#endif // defined(FIXED_POINT)

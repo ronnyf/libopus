@@ -35,7 +35,11 @@
 #ifndef OPUS_CUSTOM_H
 #define OPUS_CUSTOM_H
 
+#if BUILD_OPUS_FRAMEWORK
+#include <libopus/opus_defines.h>
+#else
 #include "opus_defines.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {

@@ -36,6 +36,8 @@
 #endif
 #endif
 
+#if defined(HAVE_ARM_NE10)
+
 #include <NE10_dsp.h>
 #include "os_support.h"
 #include "kiss_fft.h"
@@ -171,3 +173,5 @@ void opus_ifft_neon(const kiss_fft_state *st,
    }
    RESTORE_STACK;
 }
+
+#endif // HAVE_ARM_NE10

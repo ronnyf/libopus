@@ -33,7 +33,11 @@
 #ifndef OPUS_MULTISTREAM_H
 #define OPUS_MULTISTREAM_H
 
+#if BUILD_OPUS_FRAMEWORK
+#include <libopus/opus.h>
+#else
 #include "opus.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {

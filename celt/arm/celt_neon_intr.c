@@ -34,6 +34,8 @@
 #include "config.h"
 #endif
 
+#if defined(OPUS_ARM_MAY_HAVE_NEON_INTR)
+
 #include <arm_neon.h>
 #include "../pitch.h"
 
@@ -209,3 +211,5 @@ void celt_pitch_xcorr_float_neon(const opus_val16 *_x, const opus_val16 *_y,
    }
 }
 #endif
+
+#endif // OPUS_ARM_PRESUME_NEON_INTR

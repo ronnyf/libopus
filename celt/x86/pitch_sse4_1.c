@@ -29,6 +29,8 @@
 #include "config.h"
 #endif
 
+#if defined(OPUS_X86_MAY_HAVE_SSE4_1)
+
 #include <xmmintrin.h>
 #include <emmintrin.h>
 
@@ -238,3 +240,5 @@ void xcorr_kernel_sse4_1(const opus_val16 * x, const opus_val16 * y, opus_val32 
 #endif
 }
 #endif
+
+#endif // defined(OPUS_X86_MAY_HAVE_SSE4_1)

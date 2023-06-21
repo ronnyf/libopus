@@ -29,6 +29,8 @@
 #include "config.h"
 #endif
 
+#if defined(OPUS_X86_MAY_HAVE_SSE)
+
 #include "macros.h"
 #include "celt_lpc.h"
 #include "stack_alloc.h"
@@ -183,3 +185,5 @@ void comb_filter_const_sse(opus_val32 *y, opus_val32 *x, int T, int N,
 
 
 #endif
+
+#endif // defined(OPUS_X86_MAY_HAVE_SSE)
