@@ -36,6 +36,8 @@
 #endif
 #endif
 
+#if defined(HAVE_ARM_NE10)
+
 #include "kiss_fft.h"
 #include "_kiss_fft_guts.h"
 #include "mdct.h"
@@ -256,3 +258,5 @@ void clt_mdct_backward_neon(const mdct_lookup *l,
    }
    RESTORE_STACK;
 }
+
+#endif // defined(HAVE_ARM_NE10)

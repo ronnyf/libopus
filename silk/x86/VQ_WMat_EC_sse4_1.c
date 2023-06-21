@@ -29,6 +29,8 @@
 #include "config.h"
 #endif
 
+#if defined(OPUS_X86_MAY_HAVE_SSE4_1)
+
 #include <xmmintrin.h>
 #include <emmintrin.h>
 #include <smmintrin.h>
@@ -171,3 +173,5 @@ void silk_VQ_WMat_EC_sse4_1(
     }
 #endif
 }
+
+#endif // OPUS_X86_MAY_HAVE_SSE4_1

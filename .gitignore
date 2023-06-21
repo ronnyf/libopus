@@ -1,3 +1,5 @@
+xcuserdata/
+.DS_Store
 Doxyfile
 Makefile
 Makefile.in
@@ -8,7 +10,6 @@ autom4te.cache
 *.kdevses
 compile
 config.guess
-config.h
 config.h.in
 config.log
 config.status
@@ -39,7 +40,8 @@ repacketizer_demo
 stamp-h1
 test-driver
 trivial_example
-*.sw*
+#let's avoid this one, it'll ignore all Swift-PM related files
+#*.sw*
 *.o
 *.lo
 *.pc

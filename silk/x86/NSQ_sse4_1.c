@@ -29,6 +29,8 @@
 #include "config.h"
 #endif
 
+#if defined(OPUS_X86_MAY_HAVE_SSE4_1)
+
 #include <xmmintrin.h>
 #include <emmintrin.h>
 #include <smmintrin.h>
@@ -770,3 +772,5 @@ static OPUS_INLINE void silk_nsq_scale_states_sse4_1(
         NSQ->prev_gain_Q16 = Gains_Q16[ subfr ];
     }
 }
+
+#endif // defined(OPUS_X86_MAY_HAVE_SSE4_1)

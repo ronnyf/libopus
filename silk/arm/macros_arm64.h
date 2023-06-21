@@ -28,6 +28,10 @@ POSSIBILITY OF SUCH DAMAGE.
 #ifndef SILK_MACROS_ARM64_H
 #define SILK_MACROS_ARM64_H
 
+#include "config.h"
+
+#if defined(OPUS_ARM_PRESUME_AARCH64_NEON_INTR)
+
 #include <arm_neon.h>
 
 #undef silk_ADD_SAT32
@@ -36,4 +40,5 @@ POSSIBILITY OF SUCH DAMAGE.
 #undef silk_SUB_SAT32
 #define silk_SUB_SAT32(a, b) (vqsubs_s32((a), (b)))
 
+#endif // defined(OPUS_ARM_MAY_HAVE_NEON_INTR)
 #endif /* SILK_MACROS_ARM64_H */

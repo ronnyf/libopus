@@ -29,6 +29,8 @@
 # include "config.h"
 #endif
 
+#if defined(HAVE_ARM_NE10)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "modes.h"
@@ -150,3 +152,5 @@ void dump_mode_arch(CELTMode *mode)
    }
    fprintf(file, "#endif  /* end NE10_FFT_PARAMS%d_%d */\n", mode->Fs, mdctSize);
 }
+
+#endif // HAVE_ARM_NE10
